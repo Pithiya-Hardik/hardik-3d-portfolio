@@ -1,0 +1,476 @@
+/**
+ * resume-print.css
+ * Precision-engineered, 2-page executive print & PDF export stylesheet for Pithiya Hardik's Resume
+ */
+
+/* ==========================================================================
+   1. SHARED RESUME STYLES (Used for both @media print and On-Screen Preview)
+   ========================================================================== */
+#printableResume {
+  width: 100%;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 8.2pt;
+  line-height: 1.3;
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+#printableResume * {
+  box-sizing: border-box;
+}
+
+/* Page 1 and Page 2 Containers */
+.cv-page {
+  width: 100%;
+}
+
+.cv-page-1 {
+  page-break-after: always;
+  break-after: page;
+}
+
+.cv-page-2 {
+  page-break-before: always !important;
+  break-before: page !important;
+  padding-top: 2px;
+}
+
+/* Header Box */
+.cv-header-box {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-radius: 5px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cv-name {
+  font-family: 'Outfit', 'Inter', sans-serif !important;
+  font-size: 18pt !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin: 0 0 1px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.05;
+}
+
+.cv-title {
+  font-size: 9.8pt !important;
+  font-weight: 600 !important;
+  color: #38bdf8 !important; /* cyan */
+  margin: 0 0 4px 0;
+}
+
+.cv-bio {
+  font-size: 7.5pt !important;
+  color: #cbd5e1 !important;
+  line-height: 1.35 !important;
+  max-width: 490px;
+  margin: 0;
+}
+
+.cv-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  font-size: 7.4pt !important;
+  color: #e2e8f0 !important;
+  text-align: right;
+}
+
+.cv-contact-link {
+  color: #e2e8f0 !important;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+/* Metrics Bar */
+.cv-metrics-strip {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.cv-metric-num {
+  font-size: 10.5pt !important;
+  font-weight: 800 !important;
+  color: #0284c7 !important;
+  line-height: 1.1;
+}
+
+.cv-metric-lbl {
+  font-size: 6.8pt !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+
+/* 2-Column Grid */
+.cv-grid {
+  display: grid !important;
+  grid-template-columns: 63% 35% !important;
+  gap: 12px !important;
+}
+
+/* Section Headings */
+.cv-section-heading {
+  font-family: 'Outfit', 'Inter', sans-serif !important;
+  font-size: 9.5pt !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 1.5px solid #0284c7 !important;
+  padding-bottom: 2px;
+  margin: 0 0 6px 0;
+}
+
+/* Work Experience Entries */
+.cv-entry {
+  margin-bottom: 6px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cv-entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1px;
+}
+
+.cv-company-name {
+  font-size: 8.6pt !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.cv-period {
+  font-size: 7.4pt !important;
+  font-weight: 600 !important;
+  color: #0284c7 !important;
+}
+
+.cv-role-line {
+  font-size: 7.8pt !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  margin-bottom: 2px;
+}
+
+.cv-summary-line {
+  font-size: 7.4pt !important;
+  color: #475569 !important;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.cv-bullets {
+  margin: 0 0 2px 0;
+  padding-left: 12px;
+  font-size: 7.3pt !important;
+  color: #334155 !important;
+  line-height: 1.25;
+}
+
+.cv-bullets li {
+  margin-bottom: 1px;
+}
+
+.cv-promo-box {
+  background: #f1f5f9;
+  border-left: 2px solid #0284c7;
+  padding: 2px 4px;
+  margin: 2px 0;
+  font-size: 7pt !important;
+}
+
+.cv-promo-step {
+  margin-bottom: 1px;
+}
+
+.cv-promo-title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cv-promo-period {
+  color: #64748b;
+  font-size: 6.8pt;
+  margin-left: 3px;
+}
+
+/* Sidebar Blocks */
+.cv-sidebar-section {
+  margin-bottom: 7px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cv-skill-category-title {
+  font-size: 7.3pt !important;
+  font-weight: 700 !important;
+  color: #0284c7 !important;
+  text-transform: uppercase;
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+
+.cv-skill-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5px;
+  margin-bottom: 3px;
+}
+
+.cv-skill-pill {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #1e293b !important;
+  font-size: 6.8pt !important;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.cv-skill-pill.highlight {
+  background: #e0f2fe !important;
+  border-color: #7dd3fc !important;
+  color: #0369a1 !important;
+  font-weight: 600;
+}
+
+/* Project Cards on Page 2 */
+.cv-page2-header {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 6px 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-page2-name {
+  font-size: 10pt !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+
+.cv-page2-sub {
+  font-size: 7.5pt !important;
+  color: #0284c7 !important;
+  font-weight: 600;
+}
+
+.cv-project-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 5px 8px;
+  margin-bottom: 6px;
+  background: #ffffff;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cv-project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1px;
+}
+
+.cv-project-name {
+  font-size: 8.2pt !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.cv-project-sub {
+  font-size: 7.2pt !important;
+  color: #0284c7 !important;
+  font-weight: 600;
+}
+
+.cv-project-desc {
+  font-size: 7.2pt !important;
+  color: #475569 !important;
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.cv-project-bullets {
+  margin: 0;
+  padding-left: 11px;
+  font-size: 7.1pt !important;
+  color: #334155 !important;
+  line-height: 1.25;
+}
+
+.cv-project-bullets li {
+  margin-bottom: 1px;
+}
+
+.cv-pipeline-chip {
+  display: inline-block;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 6.4pt !important;
+  font-family: monospace;
+  color: #475569;
+  margin-top: 2px;
+}
+
+.cv-achievement-item {
+  margin-bottom: 4px;
+  font-size: 7.2pt !important;
+  line-height: 1.25;
+}
+
+.cv-achievement-title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   2. SCREEN VIEW CONTROLS (Hide unless print-preview-mode is activated)
+   ========================================================================== */
+@media screen {
+  body:not(.print-preview-mode) #printableResume,
+  body:not(.print-preview-mode) #resumePreviewBanner {
+    display: none !important;
+  }
+
+  body.print-preview-mode {
+    background: #090d16 !important;
+    padding: 72px 16px 40px 16px !important;
+    overflow-y: auto !important;
+  }
+
+  body.print-preview-mode header.navbar,
+  body.print-preview-mode main,
+  body.print-preview-mode footer.footer,
+  body.print-preview-mode .modal-overlay,
+  body.print-preview-mode .bg-grid {
+    display: none !important;
+  }
+
+  body.print-preview-mode #resumePreviewBanner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 54px;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 242, 254, 0.35);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  body.print-preview-mode #printableResume {
+    display: block !important;
+    max-width: 210mm;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 8mm 10mm;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+  }
+
+  body.print-preview-mode .cv-page-2 {
+    margin-top: 25px;
+    border-top: 2px dashed #94a3b8;
+    padding-top: 15px;
+  }
+}
+
+/* ==========================================================================
+   3. PRINT / SAVE AS PDF: Render ONLY the 2-page executive resume
+   ========================================================================== */
+@media print {
+  header.navbar,
+  main,
+  footer.footer,
+  .modal-overlay,
+  .toast-container,
+  .bg-grid,
+  .canvas-hint,
+  .hero-3d-wrap,
+  .hero-section,
+  .section-wrapper,
+  #hero,
+  #about,
+  #timeline,
+  #projects,
+  #architecture,
+  #skills,
+  #contact,
+  #projectModal,
+  #resumePreviewBanner,
+  button,
+  .btn {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 8.2pt !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 7mm 9mm 7mm 9mm;
+  }
+
+  #printableResume {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .cv-page-1 {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .cv-page-2 {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 0 !important;
+  }
+}

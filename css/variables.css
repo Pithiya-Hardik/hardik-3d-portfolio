@@ -1,0 +1,137 @@
+/**
+ * variables.css
+ * Core design tokens, theme palettes, and typography for Pithiya Hardik's 3D Portfolio
+ * v2.0 — Premium Edition
+ */
+
+:root {
+  /* =========================================================================
+     COLOR PALETTE — Cyber Space Dark
+     ========================================================================= */
+  --bg-dark: #070a12;
+  --bg-space: #0a0f1d;
+  --bg-surface: #101728;
+  --bg-card: rgba(16, 23, 40, 0.7);
+  --bg-card-hover: rgba(22, 33, 58, 0.85);
+  --bg-glass: rgba(13, 20, 36, 0.65);
+  --bg-glass-subtle: rgba(255, 255, 255, 0.03);
+
+  /* =========================================================================
+     BORDERS & DIVIDERS
+     ========================================================================= */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-accent: rgba(0, 242, 254, 0.35);
+  --border-glow: rgba(121, 40, 202, 0.4);
+
+  /* =========================================================================
+     PRIMARY CYBER ACCENTS
+     ========================================================================= */
+  --cyan-primary: #00f2fe;
+  --cyan-secondary: #4facfe;
+  --purple-primary: #7928ca;
+  --purple-secondary: #9055ff;
+  --blue-accent: #3b82f6;
+  --emerald-accent: #10b981;
+  --amber-accent: #f59e0b;
+  --rose-accent: #f43f5e;
+  --gold-accent: #fbbf24;
+  --neon-green: #39ff14;
+
+  /* =========================================================================
+     TYPOGRAPHY COLORS
+     ========================================================================= */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-inverse: #070a12;
+
+  /* =========================================================================
+     VIBRANT GRADIENTS
+     ========================================================================= */
+  --grad-hero: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7928ca 100%);
+  --grad-accent: linear-gradient(135deg, #00f2fe 0%, #7928ca 100%);
+  --grad-surface: linear-gradient(180deg, rgba(16, 23, 40, 0.8) 0%, rgba(10, 15, 29, 0.95) 100%);
+  --grad-card-border: linear-gradient(135deg, rgba(0, 242, 254, 0.4), rgba(121, 40, 202, 0.2), rgba(255, 255, 255, 0.05));
+  --grad-emerald: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --grad-amber: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+
+  /* New premium gradients */
+  --grad-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  --grad-ocean: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #4f46e5 100%);
+  --grad-fire: linear-gradient(135deg, #ff6b35 0%, #f43f5e 50%, #c2185b 100%);
+  --grad-neon: linear-gradient(135deg, #39ff14 0%, #00f2fe 50%, #7928ca 100%);
+  --grad-mesh-1: conic-gradient(from 180deg at 50% 50%, #00f2fe 0deg, #7928ca 90deg, #f43f5e 180deg, #fbbf24 270deg, #00f2fe 360deg);
+
+  /* =========================================================================
+     SHADOWS & GLOWS
+     ========================================================================= */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 32px 80px rgba(0, 0, 0, 0.75);
+  --shadow-card-hover: 0 24px 60px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 242, 254, 0.15);
+
+  --glow-cyan: 0 0 30px rgba(0, 242, 254, 0.25);
+  --glow-purple: 0 0 35px rgba(121, 40, 202, 0.3);
+  --glow-emerald: 0 0 25px rgba(16, 185, 129, 0.3);
+  --glow-gold: 0 0 30px rgba(251, 191, 36, 0.4);
+  --glow-rose: 0 0 30px rgba(244, 63, 94, 0.35);
+  --glow-blue: 0 0 30px rgba(59, 130, 246, 0.35);
+  --glow-neon: 0 0 40px rgba(57, 255, 20, 0.3);
+
+  --shadow-neon-cyan: 0 0 20px rgba(0, 242, 254, 0.5), 0 0 60px rgba(0, 242, 254, 0.2);
+  --shadow-neon-purple: 0 0 20px rgba(121, 40, 202, 0.5), 0 0 60px rgba(121, 40, 202, 0.2);
+
+  /* =========================================================================
+     GLASS MORPHISM TOKENS
+     ========================================================================= */
+  --glass-bg: rgba(13, 20, 36, 0.6);
+  --glass-bg-heavy: rgba(10, 15, 29, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+
+  /* =========================================================================
+     BACKDROP BLUR TOKENS
+     ========================================================================= */
+  --blur-sm: blur(8px);
+  --blur-md: blur(16px);
+  --blur-lg: blur(28px);
+  --blur-xl: blur(40px);
+
+  /* =========================================================================
+     TYPOGRAPHY
+     ========================================================================= */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* =========================================================================
+     TRANSITIONS
+     ========================================================================= */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* =========================================================================
+     SPACING SCALE
+     ========================================================================= */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 64px;
+
+  /* =========================================================================
+     LAYOUT & BORDER RADIUS
+     ========================================================================= */
+  --max-width: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  --nav-height: 72px;
+}

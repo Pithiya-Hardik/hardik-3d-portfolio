@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pithiya Hardik | Project Manager & Senior ERPNext Developer</title>
+  <meta name="description" content="Official portfolio and digital resume of Pithiya Hardik. Project Manager & Senior ERPNext/Frappe Specialist with 4.8 years experience architecting healthcare manufacturing, fintech infrastructure, and Python automations.">
+  <meta name="keywords" content="Pithiya Hardik, ERPNext Developer, Frappe Framework, Python Developer, Project Manager, Meril Healthcare, Minix Fintech, Akhodad, Gujarat">
+  <meta name="author" content="Pithiya Hardik">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pithiya Hardik | Project Manager & Senior ERPNext Developer">
+  <meta property="og:description" content="Interactive 3D Portfolio & Digital Resume showcasing 4.8 years of enterprise ERPNext, Python, and Frappe engineering.">
+  <meta property="og:url" content="https://pithiyahardik.dev">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/resume-print.css?v=20261026_v2">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pithiya Hardik",
+    "jobTitle": "Project Manager & Senior ERPNext Developer",
+    "url": "https://pithiyahardik.dev",
+    "email": "pithiyahardik18@gmail.com",
+    "telephone": "+917284013972",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Akhodad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/pithiya-hardik-227328214",
+      "https://github.com/Pithiya-Hardik?tab=stars"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Atmosphere Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Sticky Resume Preview Controls (Only visible in Preview Mode) -->
+  <div id="resumePreviewBanner">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="font-weight: 700; font-size: 0.95rem; color: #38bdf8;">
+        📄 Printable Executive CV Preview (A4 · 2 Pages)
+      </span>
+      <span style="font-size: 0.8rem; color: #94a3b8;">
+        Formatted for instant PDF Download & Printing
+      </span>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <button class="btn btn-primary btn-sm" onclick="window.print()" style="font-size: 0.85rem; padding: 6px 14px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Save as PDF / Print
+      </button>
+      <button class="btn btn-secondary btn-sm" onclick="toggleResumePreview(false)" style="font-size: 0.85rem; padding: 6px 12px;">
+        ✕ Close Preview
+      </button>
+    </div>
+  </div>
+
+  <!-- FLOATING NAVIGATION BAR -->
+  <header class="navbar" id="mainNav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Pithiya Hardik Home">
+        <div class="nav-logo-mark">PH</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Pithiya Hardik</span>
+          <span class="nav-brand-role">Project Manager · Frappe</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#timeline" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Case Studies</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm" onclick="toggleResumePreview(true)" id="navPreviewResumeBtn" title="Preview Printable Resume on Screen" style="border-color: rgba(0, 242, 254, 0.4);">
+          Preview CV
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="window.print()" id="navResumeBtn" title="Print or Save PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Print / PDF
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (3D INTERACTIVE CANVAS)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Content -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap">
+              <span class="pulse-dot"></span>
+              <span class="badge badge-emerald">Available for Senior Roles & Consulting</span>
+            </div>
+
+            <h1 class="hero-title">
+              Engineering <span class="text-gradient">Intelligent ERP</span> & Scalable Python Solutions
+            </h1>
+
+            <p class="hero-lead">
+              Hi, I’m <strong style="color: #ffffff;">Pithiya Hardik</strong> — Project Manager & Senior Frappe/ERPNext Specialist with <strong style="color: var(--cyan-primary);">4 years and 8 months</strong> of enterprise experience architecting solutions for large-scale healthcare manufacturing (Meril MNC), high-frequency fintech systems (Minix), and automated workflows.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="heroExploreProjectsBtn">
+                Explore Case Studies
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="#timeline" class="btn btn-secondary" id="heroViewTimelineBtn">
+                Career Progression
+              </a>
+              <button class="btn btn-outline" onclick="window.print()" id="heroDownloadResumeBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Print / Save PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D WebGL Canvas Layer -->
+          <div class="hero-3d-wrap">
+            <canvas id="heroCanvas3d" aria-label="Interactive 3D ERP Node Cluster"></canvas>
+            <div class="canvas-hint">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+              Drag to Orbit 3D Core
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Metrics Strip -->
+        <div class="hero-stats-strip reveal-on-scroll">
+          <div class="stat-item">
+            <div class="stat-value">4.8<span class="stat-suffix">Yrs</span></div>
+            <div class="stat-label">Enterprise Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">12<span class="stat-suffix">+</span></div>
+            <div class="stat-label">Production Apps & Modules</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">30<span class="stat-suffix">%</span></div>
+            <div class="stat-label">Order Turnaround Reduction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">100<span class="stat-suffix">%</span></div>
+            <div class="stat-label">On-Time Project Delivery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT & SPECIALIZATION PILLARS
+         ========================================================================== -->
+    <section class="section-wrapper" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Strategic Engineering</div>
+          <h2 class="section-title">Transforming Complex Enterprise Operations Into <span class="text-gradient">Smooth Digital Workflows</span></h2>
+          <p class="section-subtitle">
+            I bridge the gap between complex business processes and clean technical architecture, building robust solutions on Frappe and Python that empower teams and scale businesses.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Summary Bio -->
+          <div class="glass-card about-summary-card reveal-on-scroll">
+            <div>
+              <span class="badge badge-cyan" style="margin-bottom: 16px;">Core Philosophy</span>
+              <p class="about-lead-text">
+                "An ERP shouldn't just record data — it should accelerate decision-making, prevent costly human error, and automate manual bottlenecks."
+              </p>
+              <p style="margin-top: 16px; color: var(--text-muted); line-height: 1.65;">
+                Over my 4.8 years across <strong>Minix Fintech</strong>, <strong>Hybrowlabs</strong>, and <strong>Sanskar Technolab</strong>, I have specialized in architecting complete lifecycle workflows: from healthcare manufacturing compliance (Meril MNC) and Exim import/export taxation to thermal barcode scanning, low-latency colocation tracking, and automated ChatOps bots.
+              </p>
+            </div>
+            
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <span class="badge badge-purple">Frappe Framework v14/v15</span>
+              <span class="badge badge-cyan">ERPNext Manufacturing & Exim</span>
+              <span class="badge badge-emerald">Python Automation</span>
+              <span class="badge badge-amber">Fintech Asset Tracking</span>
+            </div>
+          </div>
+
+          <!-- 4 Pillars -->
+          <div class="pillars-grid reveal-on-scroll">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <h3 class="pillar-title">Manufacturing & Supply Chain</h3>
+              <p class="pillar-desc">Multi-tier BOMs, work orders, Exim landed cost calculation, and subcontracting workflows.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+              </div>
+              <h3 class="pillar-title">Fintech & IT Infrastructure</h3>
+              <p class="pillar-desc">Hardware tracking at NSE Colocation (FD1/FD2), thermal Code128 barcodes, and custody handovers.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <h3 class="pillar-title">ChatOps & Omnichannel Bots</h3>
+              <p class="pillar-desc">Zoom Chatbot cards with interactive action buttons and automated WhatsApp notifications.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="pillar-title">High-Throughput Databases</h3>
+              <p class="pillar-desc">MariaDB query optimization, indexes, background Redis workers, and real-time custom HTML blocks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORK EXPERIENCE TIMELINE (VERIFIED LINKEDIN HISTORY)
+         ========================================================================== -->
+    <section class="section-wrapper" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career Trajectory</div>
+          <h2 class="section-title">Verified Professional <span class="text-gradient">Experience & Growth</span></h2>
+          <p class="section-subtitle">
+            4 years and 8 months of demonstrated engineering execution, from Python trainee to Senior Developer and Project Manager.
+          </p>
+        </div>
+
+        <div class="timeline-container" id="timelineContainer">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ENTERPRISE CASE STUDIES & PORTFOLIO
+         ========================================================================== -->
+    <section class="section-wrapper" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Production Implementations</div>
+          <h2 class="section-title">Featured Enterprise <span class="text-gradient">Case Studies</span></h2>
+          <p class="section-subtitle">
+            Real production systems architected for multinational manufacturers, fintech firms, and enterprise operations.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-nav">
+          <button class="filter-btn active" data-category="All" id="filterAllBtn">All Projects</button>
+          <button class="filter-btn" data-category="Manufacturing" id="filterMfgBtn">Manufacturing</button>
+          <button class="filter-btn" data-category="Fintech" id="filterFintechBtn">Fintech & IT Ops</button>
+          <button class="filter-btn" data-category="Integrations" id="filterIntegrationsBtn">Integrations & APIs</button>
+          <button class="filter-btn" data-category="Supply Chain" id="filterSupplyChainBtn">Supply Chain</button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="case-studies-grid" id="caseStudiesGrid">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE ARCHITECTURE VISUALIZER
+         ========================================================================== -->
+    <section class="section-wrapper" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Technical Depth</div>
+          <h2 class="section-title">Interactive ERPNext <span class="text-gradient">Architecture Pipeline</span></h2>
+          <p class="section-subtitle">
+            Click across the system layers below to inspect how I architect high-throughput Frappe solutions in production.
+          </p>
+        </div>
+
+        <div class="glass-card arch-visualizer-card reveal-on-scroll">
+          <div class="arch-pipeline" id="archPipeline">
+            <!-- Rendered dynamically by architecture-flow.js -->
+          </div>
+
+          <div class="arch-detail-panel" id="archDetailPanel">
+            <!-- Rendered dynamically by architecture-flow.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TECHNICAL SKILLS MATRIX
+         ========================================================================== -->
+    <section class="section-wrapper" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Technical Proficiency</div>
+          <h2 class="section-title">Skills & Ecosystem <span class="text-gradient">Mastery</span></h2>
+          <p class="section-subtitle">
+            A comprehensive overview of my core competencies across enterprise systems, backend development, and DevOps.
+          </p>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION & ACHIEVEMENTS
+         ========================================================================== -->
+    <section class="section-wrapper" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Milestones</div>
+          <h2 class="section-title">Key Achievements & <span class="text-gradient">Education</span></h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+          <div class="glass-card reveal-on-scroll">
+            <span class="badge badge-emerald" style="margin-bottom: 16px;">Formal Education</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Bachelor of Computer Applications (BCA)</h3>
+            <p style="color: var(--cyan-primary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 12px;">Computer Science & Information Technology</p>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+              Solid academic grounding in algorithms, relational database architectures, software engineering principles, and object-oriented programming.
+            </p>
+          </div>
+
+          <div class="glass-card reveal-on-scroll">
+            <span class="badge badge-purple" style="margin-bottom: 16px;">Independent Delivery</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">End-to-End Project Execution</h3>
+            <p style="color: var(--purple-secondary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 12px;">Full Project Lifecycles</p>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+              Demonstrated track record of managing projects single-handedly: from stakeholder discovery and business process mapping to DocType modeling, Python coding, and on-premise deployment.
+            </p>
+          </div>
+
+          <div class="glass-card reveal-on-scroll">
+            <span class="badge badge-amber" style="margin-bottom: 16px;">Business Impact</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">30% Turnaround Speedup</h3>
+            <p style="color: var(--amber-accent); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 12px;">Wholesale Trading Enterprise</p>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+              Re-engineered order reservation workflows, eliminating inventory contention and enabling same-day fulfillment with zero stock discrepancies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & INQUIRY HUB
+         ========================================================================== -->
+    <section class="section-wrapper" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Let's Connect</div>
+          <h2 class="section-title">Initiate a Conversation on <span class="text-gradient">Your Next Project</span></h2>
+          <p class="section-subtitle">
+            Whether you need a Senior ERPNext / Frappe Specialist, a Project Manager for your digital transformation, or enterprise consulting.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Details -->
+          <div class="glass-card contact-info-card reveal-on-scroll">
+            <div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 12px;">Direct Reach</h3>
+              <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">
+                Feel free to email me directly or connect via LinkedIn. I respond to inquiries promptly.
+              </p>
+
+              <div class="contact-items-list">
+                <div class="contact-method" onclick="copyToClipboard('pithiyahardik18@gmail.com', 'Email')" style="cursor: pointer;" title="Click to copy email">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-title">Email (Click to Copy)</div>
+                    <div class="contact-detail-val">pithiyahardik18@gmail.com</div>
+                  </div>
+                </div>
+
+                <div class="contact-method" onclick="copyToClipboard('+917284013972', 'Phone')" style="cursor: pointer;" title="Click to copy phone">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-title">Phone / WhatsApp</div>
+                    <div class="contact-detail-val">+91 72840 13972</div>
+                  </div>
+                </div>
+
+                <a href="https://linkedin.com/in/pithiya-hardik-227328214" target="_blank" rel="noopener noreferrer" class="contact-method">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-title">LinkedIn Profile</div>
+                    <div class="contact-detail-val">pithiya-hardik-227328214 ↗</div>
+                  </div>
+                </a>
+
+                <a href="https://github.com/Pithiya-Hardik?tab=stars" target="_blank" rel="noopener noreferrer" class="contact-method">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-title">GitHub Profile</div>
+                    <div class="contact-detail-val">github.com/Pithiya-Hardik ↗</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--text-dim); border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+              📍 Based in Akhodad / Gandhinagar / Ahmedabad, Gujarat, India
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="glass-card reveal-on-scroll">
+            <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Send a Direct Message</h3>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px;">
+              Fill in your inquiry details below. This will trigger a pre-formatted email directly to my inbox.
+            </p>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="senderName">Your Full Name *</label>
+                <input type="text" class="form-control" id="senderName" placeholder="e.g. John Doe / HR Director" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderEmail">Your Email Address *</label>
+                <input type="email" class="form-control" id="senderEmail" placeholder="e.g. contact@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactSubject">Inquiry Nature</label>
+                <select class="form-control" id="contactSubject">
+                  <option value="Senior ERPNext Role / Full-time Opportunity">Full-time Senior / Lead ERP Role</option>
+                  <option value="Enterprise ERP Implementation Consulting">Enterprise ERP Consulting</option>
+                  <option value="Custom Frappe App / Python Automation Project">Custom Frappe / Python Project</option>
+                  <option value="General Technical Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderMessage">Project or Role Requirements *</label>
+                <textarea class="form-control" id="senderMessage" placeholder="Describe your project, timeline, or position details..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="submitContactBtn" style="width: 100%; margin-top: 8px;">
+                Send Direct Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CASE STUDY DEEP DIVE MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalTitle" style="font-size: 1.5rem; margin-bottom: 4px;">Project Title</h3>
+          <p id="modalSubtitle" style="font-size: 0.85rem; color: var(--cyan-primary); font-family: var(--font-mono);">Client · Duration</p>
+        </div>
+        <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Injected dynamically by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--text-main); margin-bottom: 4px;">
+          Pithiya Hardik
+        </div>
+        <div style="font-size: 0.85rem; color: var(--text-dim);">
+          Project Manager & Senior ERPNext Developer · © 2026. All rights reserved.
+        </div>
+      </div>
+
+      <div class="footer-status-pill">
+        <span class="pulse-dot"></span>
+        <span id="localClock">11:55 AM IST (Gujarat, India)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DEDICATED EXECUTIVE PRINTABLE RESUME (RENDERED FOR PRINT & PDF DOWNLOAD)
+       ========================================================================== -->
+  <div id="printableResume">
+    <!-- PAGE 1: EXECUTIVE PROFILE, EXPERIENCE & TECHNICAL SKILLS -->
+    <div class="cv-page cv-page-1">
+      <!-- Header Band -->
+      <div class="cv-header-box">
+        <div>
+          <h1 class="cv-name">PITHIYA HARDIK</h1>
+          <div class="cv-title">Python and ERPNext Developer | Project Manager</div>
+          <p class="cv-bio">
+            Hi, I’m Pithiya Hardik from Akhodad. Completed graduation in BCA and currently work as a Project Manager and Senior ERPNext / Python Developer with <strong>4 years and 8 months</strong> of enterprise experience. Passionate about building smart solutions, automating complex workflows, and simplifying business processes through technology.
+          </p>
+        </div>
+        <div class="cv-contact-col">
+          <div class="cv-contact-link">
+            <span>✉️</span> pithiyahardik18@gmail.com
+          </div>
+          <div class="cv-contact-link">
+            <span>📞</span> +91 72840 13972
+          </div>
+          <div class="cv-contact-link">
+            <span>📍</span> Akhodad / Gandhinagar, Gujarat, India
+          </div>
+          <div class="cv-contact-link">
+            <span>🔗</span> linkedin.com/in/pithiya-hardik-227328214
+          </div>
+          <div class="cv-contact-link">
+            <span>💻</span> github.com/Pithiya-Hardik
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics Bar -->
+      <div class="cv-metrics-strip">
+        <div>
+          <div class="cv-metric-num">4.8 Yrs</div>
+          <div class="cv-metric-lbl">Enterprise Experience</div>
+        </div>
+        <div>
+          <div class="cv-metric-num">12+</div>
+          <div class="cv-metric-lbl">Production Apps & Modules</div>
+        </div>
+        <div>
+          <div class="cv-metric-num">30%</div>
+          <div class="cv-metric-lbl">Order Turnaround Reduction</div>
+        </div>
+        <div>
+          <div class="cv-metric-num">100%</div>
+          <div class="cv-metric-lbl">On-Time Project Delivery</div>
+        </div>
+      </div>
+
+      <!-- 2-Column Body -->
+      <div class="cv-grid">
+        <!-- Main Column: Experience -->
+        <div>
+          <h2 class="cv-section-heading">Work Experience</h2>
+
+          <!-- 1. Minix Fintech -->
+          <div class="cv-entry">
+            <div class="cv-entry-row">
+              <span class="cv-company-name">Minix Fintech Private Limited</span>
+              <span class="cv-period">Dec 2025 – Present · 11 mos</span>
+            </div>
+            <div class="cv-role-line">Project Manager · Gandhinagar, Gujarat (On-site)</div>
+            <div class="cv-summary-line">
+              Leading enterprise IT asset management, low-latency colocation infrastructure tracking, and bespoke Frappe application lifecycles in a high-frequency fintech environment.
+            </div>
+            <ul class="cv-bullets">
+              <li>Designed and deployed Minix IT Asset Tracking System supporting barcode thermal scanning (Code128) and real-time custody handovers.</li>
+              <li>Spearheaded infrastructure monitoring for mission-critical trading servers at NSE Colocation (FD1/FD2) tracking hostnames, IPs, device criticalities, and audit schedules.</li>
+              <li>Engineered real-time Custom HTML Dashboard desk blocks for instant visibility into asset allocations and compliance lifecycles.</li>
+              <li>Integrated multi-channel enterprise bots (Zoom chatbot with interactive buttons & automated WhatsApp notifications).</li>
+            </ul>
+          </div>
+
+          <!-- 2. Hybrowlabs Technologies -->
+          <div class="cv-entry">
+            <div class="cv-entry-row">
+              <span class="cv-company-name">Hybrowlabs Technologies Pvt Ltd</span>
+              <span class="cv-period">Sep 2024 – Dec 2025 · 1 yr 4 mos</span>
+            </div>
+            <div class="cv-role-line">Python & ERPNext Developer · Pune District, Maharashtra (On-site)</div>
+            <div class="cv-summary-line">
+              Lead ERPNext technical specialist driving large-scale digital transformation for multinational healthcare manufacturing clients.
+            </div>
+            <ul class="cv-bullets">
+              <li>Configured and set up complete manufacturing flow in ERPNext for <strong>Meril (Multinational Healthcare Manufacturer)</strong>, managing requirement gathering, process mapping, and development.</li>
+              <li>Engineered full <strong>Exim (Import/Export) workflows</strong> in the Buying module covering domestic purchase, import purchase, custom duty calculations, and compliance audit logging.</li>
+              <li>Developed multi-level Bill of Materials (BOM) explosion, work order routing, job card operational tracking, and quality inspection protocols.</li>
+              <li>Delivered ERPNext solutions aligning with client's compliance, multi-currency accounting, and operational requirements.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Sanskar Technolab -->
+          <div class="cv-entry">
+            <div class="cv-entry-row">
+              <span class="cv-company-name">Sanskar Technolab Pvt. Ltd.</span>
+              <span class="cv-period">May 2022 – Sep 2024 · 2 yrs 5 mos</span>
+            </div>
+            <div class="cv-role-line">Senior Frappe Developer | ERPNext Developer (3-Stage Growth) · Ahmedabad (On-site)</div>
+            
+            <div class="cv-promo-box">
+              <div class="cv-promo-step">
+                <span class="cv-promo-title">Senior Frappe Developer | ERPNext Developer</span>
+                <span class="cv-promo-period">May 2023 – Sep 2024 (1 yr 5 mos)</span>
+              </div>
+              <div class="cv-promo-step">
+                <span class="cv-promo-title">ERPNext Developer | Frappe Developer</span>
+                <span class="cv-promo-period">Oct 2022 – Apr 2023 (7 mos)</span>
+              </div>
+              <div class="cv-promo-step">
+                <span class="cv-promo-title">Python Trainee Developer</span>
+                <span class="cv-promo-period">May 2022 – Sep 2022 (5 mos)</span>
+              </div>
+            </div>
+
+            <ul class="cv-bullets">
+              <li>Successfully completed multiple manufacturing and ERP projects single-handedly, managing entire lifecycle from requirement gathering to deployment.</li>
+              <li>Managed eFRA Industries manufacturing implementation across Manufacturing, Stock, Buying, Selling, and Subcontracting; created Item Master auto-code generator, weight calculator, batch master receipt-wise tracking, and machine-wise time tracking.</li>
+              <li>Engineered automated WhatsApp integration (<code>whatsapp_sender</code>) for instant document dispatches (Invoices, POs, Receipts) via WhatsApp Business Cloud API.</li>
+              <li>Implemented ERPNext for a Trading client, resulting in a 30% reduction in order processing time and improved inventory management.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar: Skills & Education -->
+        <div>
+          <h2 class="cv-section-heading">Technical Skills</h2>
+
+          <div class="cv-sidebar-section">
+            <div class="cv-skill-category-title">ERP & Frappe Ecosystem</div>
+            <div class="cv-skill-pill-list">
+              <span class="cv-skill-pill highlight">Frappe Framework (v14/v15)</span>
+              <span class="cv-skill-pill highlight">ERPNext Core Modules</span>
+              <span class="cv-skill-pill">Custom DocTypes</span>
+              <span class="cv-skill-pill">Server & Client Scripts</span>
+              <span class="cv-skill-pill">Custom HTML Blocks</span>
+              <span class="cv-skill-pill">Frappe Bench CLI</span>
+              <span class="cv-skill-pill">Jinja Print Formats</span>
+            </div>
+
+            <div class="cv-skill-category-title">Manufacturing & Supply Chain</div>
+            <div class="cv-skill-pill-list">
+              <span class="cv-skill-pill highlight">Multi-Tier BOM Explosion</span>
+              <span class="cv-skill-pill highlight">Exim Buying Workflows</span>
+              <span class="cv-skill-pill">Work Orders & Job Cards</span>
+              <span class="cv-skill-pill">Subcontracting Operations</span>
+              <span class="cv-skill-pill">Batch Master Tracking</span>
+              <span class="cv-skill-pill">Raw Material Weight Calc</span>
+              <span class="cv-skill-pill">Machine Time Tracking</span>
+            </div>
+
+            <div class="cv-skill-category-title">Programming & Databases</div>
+            <div class="cv-skill-pill-list">
+              <span class="cv-skill-pill highlight">Python 3 (Async, OOP)</span>
+              <span class="cv-skill-pill highlight">JavaScript (ES6+, DOM)</span>
+              <span class="cv-skill-pill highlight">MariaDB / MySQL</span>
+              <span class="cv-skill-pill">SQL Complex Joins & Indexes</span>
+              <span class="cv-skill-pill">HTML5 & CSS3</span>
+            </div>
+
+            <div class="cv-skill-category-title">Integrations & ChatOps</div>
+            <div class="cv-skill-pill-list">
+              <span class="cv-skill-pill highlight">WhatsApp Business API</span>
+              <span class="cv-skill-pill highlight">Zoom Chatbot Cards</span>
+              <span class="cv-skill-pill">RESTful API Design</span>
+              <span class="cv-skill-pill">Two-Way Webhooks</span>
+              <span class="cv-skill-pill">Thermal Barcode (Code128)</span>
+              <span class="cv-skill-pill">Redis & RQ Queues</span>
+            </div>
+
+            <div class="cv-skill-category-title">DevOps & Server Admin</div>
+            <div class="cv-skill-pill-list">
+              <span class="cv-skill-pill">Linux (Ubuntu/Debian)</span>
+              <span class="cv-skill-pill">Git / GitHub Workflows</span>
+              <span class="cv-skill-pill">Nginx Reverse Proxy</span>
+              <span class="cv-skill-pill">Postman API Testing</span>
+            </div>
+          </div>
+
+          <h2 class="cv-section-heading">Education</h2>
+          <div class="cv-sidebar-section">
+            <div style="font-weight: 700; color: #0f172a; font-size: 8.5pt;">Bachelor of Computer Applications (BCA)</div>
+            <div style="color: #64748b; font-size: 7.5pt;">Saurashtra University · Gujarat, India</div>
+          </div>
+
+          <h2 class="cv-section-heading">Languages</h2>
+          <div class="cv-sidebar-section">
+            <div style="font-size: 7.8pt; color: #334155;">
+              • <strong>English:</strong> Professional Working<br>
+              • <strong>Hindi:</strong> Fluent<br>
+              • <strong>Gujarati:</strong> Native
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: ENTERPRISE PROJECTS & ARCHITECTURAL ACHIEVEMENTS -->
+    <div class="cv-page cv-page-2">
+      <!-- Page 2 Header -->
+      <div class="cv-page2-header">
+        <div>
+          <span class="cv-page2-name">PITHIYA HARDIK</span>
+          <span style="color: #94a3b8; margin: 0 6px;">|</span>
+          <span class="cv-page2-sub">Featured Production Projects & Architectural Execution</span>
+        </div>
+        <div style="font-size: 7.5pt; color: #64748b;">
+          pithiyahardik18@gmail.com · +91 72840 13972
+        </div>
+      </div>
+
+      <div class="cv-grid">
+        <!-- Main Column: Detailed Projects -->
+        <div>
+          <h2 class="cv-section-heading">Featured Enterprise Projects</h2>
+
+          <!-- Project 1: Meril Healthcare Manufacturing -->
+          <div class="cv-project-item">
+            <div class="cv-project-head">
+              <span class="cv-project-name">1. Meril – Healthcare Manufacturing ERP (MNC)</span>
+              <span class="cv-project-sub">09/2024 – Dec 2025</span>
+            </div>
+            <div style="font-size: 7.2pt; color: #64748b; margin-bottom: 2px;">
+              <strong>Client:</strong> Meril Life Sciences · <strong>Modules:</strong> Manufacturing, Buying, Exim
+            </div>
+            <div class="cv-project-desc">
+              End-to-end ERPNext manufacturing setup for a multinational medical device manufacturer requiring strict compliance, customs calculations, and multi-tier BOM explosion.
+            </div>
+            <ul class="cv-project-bullets">
+              <li>Set up complete manufacturing flow in ERPNext from raw material inward to finished goods ledger.</li>
+              <li>Automated import & domestic purchase process mapping with custom duty & landed cost calculations in Buying module.</li>
+              <li>Configured multi-tier BOM explosion, shop-floor work orders, machine job cards, and QC inspection gates.</li>
+              <li>Enabled full regulatory compliance and operational excellence for large-scale healthcare device production.</li>
+            </ul>
+            <div class="cv-pipeline-chip">Pipeline: Buying (Exim) → Custom Duty Engine → Multi-tier BOM → Work Orders → QC Gates → Batch Ledger</div>
+          </div>
+
+          <!-- Project 2: eFRA Industries Production Suite -->
+          <div class="cv-project-item">
+            <div class="cv-project-head">
+              <span class="cv-project-name">2. eFRA Industries Production & Procurement Suite</span>
+              <span class="cv-project-sub">02/2024 – 08/2024</span>
+            </div>
+            <div style="font-size: 7.2pt; color: #64748b; margin-bottom: 2px;">
+              <strong>Client:</strong> eFRA Industries LLP · <strong>Modules:</strong> Manufacturing, Stock, Buying, Selling, Subcontracting
+            </div>
+            <div class="cv-project-desc">
+              Managed entire project lifecycle from requirement gathering to deployment for industrial equipment manufacturing and outsourced operations.
+            </div>
+            <ul class="cv-project-bullets">
+              <li>Created Item Master auto-generation for standard Item Code & Name creation, eliminating duplicate SKUs.</li>
+              <li>Optimized procurement processes with a custom raw material weight calculator system for metal sheets and pipes.</li>
+              <li>Designed receipt-wise batch master tracking enabling complete traceability across manufacturing stages.</li>
+              <li>Implemented machine-wise time tracking systems for real-time production monitoring and capacity planning.</li>
+            </ul>
+            <div class="cv-pipeline-chip">Pipeline: Item Master Auto-Gen → Weight Calc → Subcontracting Order → Receipt-wise Batch → Machine Time Tracker</div>
+          </div>
+
+          <!-- Project 3: WhatsApp Automated Messaging Engine -->
+          <div class="cv-project-item">
+            <div class="cv-project-head">
+              <span class="cv-project-name">3. ERPNext WhatsApp Automated Messaging & Dispatch Engine</span>
+              <span class="cv-project-sub">2024 – 2025</span>
+            </div>
+            <div style="font-size: 7.2pt; color: #64748b; margin-bottom: 2px;">
+              <strong>Client:</strong> Enterprise Custom App (<code>whatsapp_sender</code>) · <strong>Tech:</strong> Meta WhatsApp Cloud API, Frappe Hooks
+            </div>
+            <div class="cv-project-desc">
+              Dedicated Frappe custom app integrating Meta WhatsApp Business Cloud API for automated transactional document notifications.
+            </div>
+            <ul class="cv-project-bullets">
+              <li>Achieved 98% message open rate within 5 minutes of document creation.</li>
+              <li>Automated instant WhatsApp dispatch of Sales Invoices, Purchase Orders, and Receipts with attached generated PDFs.</li>
+              <li>Configured two-way webhooks tracking Sent, Delivered, and Read statuses directly in ERPNext document logs.</li>
+              <li>Reduced customer inbound inquiry call volume by 35% through instant dispatch notifications.</li>
+            </ul>
+            <div class="cv-pipeline-chip">Pipeline: Document Event (on_submit) → whatsapp_sender App → Jinja Engine → PDF Gen → Meta API → Webhooks</div>
+          </div>
+
+          <!-- Project 4: Minix IT Asset Tracking System -->
+          <div class="cv-project-item">
+            <div class="cv-project-head">
+              <span class="cv-project-name">4. Minix IT Asset Tracking & Allocation System</span>
+              <span class="cv-project-sub">Dec 2025 – Present</span>
+            </div>
+            <div style="font-size: 7.2pt; color: #64748b; margin-bottom: 2px;">
+              <strong>Client:</strong> Minix Fintech Pvt. Ltd. · <strong>Tech:</strong> Frappe Desk, Code128 Barcodes, Custom HTML Block
+            </div>
+            <div class="cv-project-desc">
+              Real-time hardware tracking for high-frequency trading servers at NSE Colocation (FD1/FD2) and employee workstation allocations.
+            </div>
+            <ul class="cv-project-bullets">
+              <li>Direct master entry saving 80% time over traditional procurement pipelines with thermal barcode printing.</li>
+              <li>Full custody audit trails across employee exits, transfers, and hardware replacements.</li>
+              <li>NSE Colocation server health & maintenance tracking (Hostname, IP, Rack, Criticality).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar: Achievements & Architecture -->
+        <div>
+          <h2 class="cv-section-heading">Key Achievements</h2>
+
+          <div class="cv-sidebar-section">
+            <div class="cv-achievement-item">
+              <span class="cv-achievement-title">✓ Single-Handed Project Lifecycles:</span><br>
+              Successfully managed multiple enterprise ERP implementations end-to-end from initial requirement gathering to cloud/on-premise deployment.
+            </div>
+
+            <div class="cv-achievement-item">
+              <span class="cv-achievement-title">✓ 30% Turnaround Speedup:</span><br>
+              Implemented ERPNext for a wholesale trading client, reducing order fulfillment time by 30% and eliminating stock allocation bottlenecks.
+            </div>
+
+            <div class="cv-achievement-item">
+              <span class="cv-achievement-title">✓ 35% Inbound Call Drop:</span><br>
+              WhatsApp automated dispatches reduced customer invoice status inquiries by 35% via instant PDF delivery.
+            </div>
+
+            <div class="cv-achievement-item">
+              <span class="cv-achievement-title">✓ 3 Consecutive Promotions:</span><br>
+              Demonstrated fast-track growth at Sanskar Technolab from Python Trainee to ERPNext Developer to Senior Frappe Developer in 2.4 years.
+            </div>
+
+            <div class="cv-achievement-item">
+              <span class="cv-achievement-title">✓ 100% On-Time Delivery:</span><br>
+              Consistent track record delivering complex custom Frappe apps, Exim tax modules, and barcode systems on schedule.
+            </div>
+          </div>
+
+          <h2 class="cv-section-heading">Architecture Design</h2>
+          <div class="cv-sidebar-section" style="font-size: 7.4pt; color: #334155; line-height: 1.4;">
+            <div style="margin-bottom: 4px;"><strong>1. Client Layer:</strong> Frappe Desk, Custom HTML Blocks, Mobile Barcode Scanners.</div>
+            <div style="margin-bottom: 4px;"><strong>2. API Gateway:</strong> Whitelisted REST endpoints, Token Auth, Role-Based Access.</div>
+            <div style="margin-bottom: 4px;"><strong>3. App Core:</strong> DocTypes, BOM Explosion, Landed Cost Tax Engines.</div>
+            <div style="margin-bottom: 4px;"><strong>4. Async Queues:</strong> Redis & RQ workers for report generation & webhooks.</div>
+            <div><strong>5. Database:</strong> MariaDB optimized indexes, multi-tenant schemas & audit logs.</div>
+          </div>
+
+          <h2 class="cv-section-heading">Professional Focus</h2>
+          <div class="cv-sidebar-section" style="font-size: 7.4pt; color: #475569;">
+            Available for Senior ERPNext Developer, Lead Frappe Architect, and Project Manager roles. Open to enterprise consulting and custom app development.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js 3D Engine (CDN with high performance) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Application Universal Controller (Zero-CORS, works locally & on Vercel) -->
+  <script src="js/app.bundle.js?v=20261026"></script>
+</body>
+</html>
