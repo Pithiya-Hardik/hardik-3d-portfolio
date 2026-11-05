@@ -627,3 +627,56 @@
   border-left-color: var(--amber-accent);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(245, 158, 11, 0.1);
 }
+
+@media (prefers-color-scheme: light) {
+  .glass-card {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+  .glass-card:hover {
+    box-shadow: 0 16px 40px rgba(3, 105, 161, 0.14);
+  }
+  .glass-card::before {
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
+  }
+  .glass-card-dark {
+    background: rgba(240, 244, 255, 0.9);
+  }
+  .modal-container {
+    background: #ffffff;
+    border-color: rgba(3, 105, 161, 0.3);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.2);
+  }
+  .modal-overlay {
+    background: rgba(240, 244, 255, 0.85);
+  }
+  .form-control {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: var(--text-main);
+  }
+  .form-control:focus {
+    background: #ffffff;
+  }
+  .toast {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(3, 105, 161, 0.3);
+  }
+  .filter-btn {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-muted);
+  }
+  .filter-btn:hover {
+    background: rgba(0, 0, 0, 0.07);
+  }
+  .btn-secondary {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.14);
+    color: var(--text-main);
+  }
+  .btn-secondary:hover {
+    background: rgba(3, 105, 161, 0.08);
+    border-color: var(--cyan-primary);
+    color: var(--cyan-primary);
+  }
+}

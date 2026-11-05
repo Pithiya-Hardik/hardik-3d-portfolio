@@ -175,3 +175,17 @@ img, svg {
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
+
+@media (prefers-color-scheme: light) {
+  body::before {
+    background:
+      radial-gradient(circle at 15% 15%, rgba(3, 105, 161, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(109, 40, 217, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(5, 150, 105, 0.05) 0%, transparent 40%);
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  }
+}

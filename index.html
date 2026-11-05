@@ -896,5 +896,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <!-- Application Universal Controller (Zero-CORS, works locally & on Vercel) -->
   <script src="js/app.bundle.js?v=20261026"></script>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Navigation">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#timeline" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Case Studies</a></li>
+      <li><a href="#architecture" class="mobile-nav-link">Architecture</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <button class="btn btn-primary" onclick="toggleResumePreview(true); closeMobileNav();">Preview CV</button>
+      <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </div>
 </body>
 </html>

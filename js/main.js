@@ -544,3 +544,42 @@ window.toggleResumePreview = function(show) {
     document.body.classList.remove('print-preview-mode');
   }
 };
+
+
+/* ==========================================================================
+   MOBILE NAV DRAWER
+   ========================================================================== */
+function initMobileNav() {
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const drawer = document.getElementById('mobileNavDrawer');
+  const closeBtn = document.getElementById('mobileNavClose');
+  if (!toggleBtn || !drawer) return;
+
+  window.closeMobileNav = function () {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  toggleBtn.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+    const isOpen = drawer.classList.contains('open');
+    drawer.setAttribute('aria-hidden', String(!isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', window.closeMobileNav);
+
+  // Close when any link inside drawer is clicked
+  drawer.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', window.closeMobileNav);
+  });
+
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') window.closeMobileNav();
+  });
+}
+
+// Call mobile nav init
+initMobileNav();
